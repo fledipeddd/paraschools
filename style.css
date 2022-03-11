@@ -1,0 +1,290 @@
+* {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(250, 0, 30);
+	font-family: serif;
+	font-size: 12pt;
+}	
+
+body {
+	overflow: hidden;
+}
+
+::selection {
+	color: white;
+	background-color: rgb(0, 0, 255, 0.99);
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+.und {
+	background-color: grey;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+a {
+	background: none;
+	color: black;
+	font-size: 12pt;
+	font-weight: bold;
+	font-family: Helvetica Neue;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* header */
+
+#header div{
+	background-color: grey;
+	z-index: 10;
+	font-size: 12pt;
+	font-weight: bold;
+	font-family: Helvetica Neue;
+	position: fixed;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#header div:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#headerDue {
+	display: block;
+	left: 250px;
+}
+
+#infoBox {
+	left: 0;
+	top: 40px;
+	padding: 0;
+	display: block;
+}
+
+div #infoBox:hover {
+	text-decoration: none;
+}
+
+div #infoBox:hover div{
+	text-decoration: none;
+}
+
+#infoAbs {
+	position: fixed;
+	top: 40px;
+	left: 250px;
+	width: 40%;	
+}
+
+#headerQuat{
+	right: 0px;
+}
+
+/* projects */
+
+#main {
+	position: absolute;
+	overflow: scroll;
+	padding-top: 200px;
+	width: 100%;
+	height: calc(100vh - 200px);
+}
+
+.title {
+	padding-left: 5px;
+	font-size: 50pt;
+	line-height: 50pt;
+}
+
+.title:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.cnt {
+	background: none;
+}
+
+.txts p {
+	background: none;
+	vertical-align: top;
+}
+
+.txts {
+	padding-left: 5px;
+}
+
+.abstract {
+	padding-top: 15px;
+	background: none;
+	width: 40%;
+}
+
+.names {
+	text-decoration: underline;
+}
+
+/* projects viusal contents */
+
+.img {
+	object-fit: center;
+	font-size: 0;
+	overflow: auto;
+ 	white-space: nowrap;
+}
+
+.img > div {
+	height: 500px;
+	display: inline-block;
+}
+
+.img img {
+	height: 500px;
+}
+
+.img > iframe {
+	overflow: hidden;
+	padding: 0;
+}
+
+iframe {
+	vertical-align: top;
+	height: 535px;
+	width: 1000px;
+	border: none;
+	resize: both;
+	background-color: white;
+}
+
+.textScroll {
+	display: inline-block; 
+	background-color: grey;
+	vertical-align: top;
+	padding-right: 5px;
+	padding-left: 5px;
+	height: 500px;
+	width: 30%;
+	overflow: scroll;
+}
+
+.textScroll p {
+	font-size: 12pt;
+	font-weight: bold;
+	font-family: Helvetica Neue;
+	background: none;
+	white-space: pre-wrap;
+}
+
+.scrollTitle {
+	font-family: Helvetica Neue;
+	background-color: grey;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.webLink {
+	vertical-align: top;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: grey;
+	overflow: scroll;
+}
+
+.webLink:hover {
+	text-decoration: underline;
+}
+
+a.imgLink img:hover{
+	cursor: pointer;
+
+}
+
+.ge {
+	background: white;
+}
+
+@media all and (max-width: 1200px) {
+	.abstract {
+		width: 50%;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.abstract {
+		width: 100%;
+	}
+
+	#headerDue {
+		left: auto;
+		right: 0;
+	}
+
+	#headerQuat {
+		display: none;
+	}
+
+	#infoBox {
+		padding-left: 5px;
+	}
+
+	#header div {
+		padding-left: 5px;
+	}
+
+	#main {
+		padding-top: 280px;
+		height: calc(100vh - 280px);
+
+	}
+
+	div #infoBox {
+		position: relative;
+		top: 40px;
+		display: block;
+		overflow: scroll;
+		height: calc(100vh - 40px);
+	}
+
+	div #infoAbs {
+		position: inherit;
+		padding-left: 0;
+		left: 0;		
+		width: 100%;	
+	}
+
+	.title {
+		padding-left: 5px;
+		font-size: 38pt;
+		line-height: 38pt;
+	}
+
+	.img img {
+		height: 300px;
+	}
+
+	iframe {
+		height: 335px;
+		width: 500px;
+	}
+
+	.img > div {
+		height: 300px;
+	}
+
+	.textScroll {
+		height: 300px;
+		width: 60%;
+	}
+}
+
+
+
+
+
